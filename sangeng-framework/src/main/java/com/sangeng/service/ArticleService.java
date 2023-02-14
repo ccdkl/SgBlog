@@ -1,6 +1,6 @@
 package com.sangeng.service;
 
-import com.sangeng.domain.Article;
+import com.sangeng.domain.entity.Article;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.sangeng.domain.ResponseResult;
 

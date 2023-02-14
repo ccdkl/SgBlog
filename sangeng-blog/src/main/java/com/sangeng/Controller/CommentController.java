@@ -1,6 +1,6 @@
 package com.sangeng.Controller;
 
-import com.sangeng.domain.Comment;
+import com.sangeng.domain.entity.Comment;
 import com.sangeng.domain.ResponseResult;
 import com.sangeng.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;

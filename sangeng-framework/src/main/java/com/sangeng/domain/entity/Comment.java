@@ -1,20 +1,21 @@
-package com.sangeng.domain;
+package com.sangeng.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
- * 分类表
- * @TableName sg_category
+ * 评论表
+ * @TableName sg_comment
  */
-@TableName(value ="sg_category")
+@TableName(value ="sg_comment")
 @Data
-public class Category implements Serializable {
+public class Comment implements Serializable {
     /**
      * 
      */
@@ -22,24 +23,34 @@ public class Category implements Serializable {
     private Long id;
 
     /**
-     * 分类名
+     * 评论类型（0代表文章评论，1代表友链评论）
      */
-    private String name;
+    private String type;
 
     /**
-     * 父分类id，如果没有父分类为-1
+     * 文章id
      */
-    private Long pid;
+    private Long articleId;
 
     /**
-     * 描述
+     * 根评论id
      */
-    private String description;
+    private Long rootId;
 
     /**
-     * 状态0:正常,1禁用
+     * 评论内容
      */
-    private String status;
+    private String content;
+
+    /**
+     * 所回复的目标评论的userid
+     */
+    private Long toCommentUserId;
+
+    /**
+     * 回复目标评论id
+     */
+    private Long toCommentId;
 
     /**
      * 

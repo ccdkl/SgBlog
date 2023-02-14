@@ -1,88 +1,64 @@
-package com.sangeng.domain;
+package com.sangeng.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
- * 用户表
- * @TableName sys_user
+ * 分类表
+ * @TableName sg_category
  */
-@TableName(value ="sys_user")
+@TableName(value ="sg_category")
 @Data
-public class User implements Serializable {
+public class Category implements Serializable {
     /**
-     * 主键
+     * 
      */
     @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
-     * 用户名
+     * 分类名
      */
-    private String userName;
+    private String name;
 
     /**
-     * 昵称
+     * 父分类id，如果没有父分类为-1
      */
-    private String nickName;
+    private Long pid;
 
     /**
-     * 密码
+     * 描述
      */
-    private String password;
+    private String description;
 
     /**
-     * 用户类型：0代表普通用户，1代表管理员
-     */
-    private String type;
-
-    /**
-     * 账号状态（0正常 1停用）
+     * 状态0:正常,1禁用
      */
     private String status;
 
     /**
-     * 邮箱
-     */
-    private String email;
-
-    /**
-     * 手机号
-     */
-    private String phonenumber;
-
-    /**
-     * 用户性别（0男，1女，2未知）
-     */
-    private String sex;
-
-    /**
-     * 头像
-     */
-    private String avatar;
-
-    /**
-     * 创建人的用户id
+     * 
      */
     private Long createBy;
 
     /**
-     * 创建时间
+     * 
      */
     private Date createTime;
 
     /**
-     * 更新人
+     * 
      */
     private Long updateBy;
 
     /**
-     * 更新时间
+     * 
      */
     private Date updateTime;
 

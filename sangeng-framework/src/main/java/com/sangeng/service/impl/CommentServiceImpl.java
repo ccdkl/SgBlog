@@ -3,21 +3,18 @@ package com.sangeng.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.sangeng.domain.Comment;
 import com.sangeng.domain.ResponseResult;
+import com.sangeng.domain.entity.Comment;
 import com.sangeng.domain.vo.CommentVo;
 import com.sangeng.domain.vo.PageVo;
-import com.sangeng.service.CommentService;
 import com.sangeng.mapper.CommentMapper;
-
+import com.sangeng.service.CommentService;
 import com.sangeng.service.UserService;
 import com.sangeng.utils.BeanCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import static com.baomidou.mybatisplus.core.toolkit.IdWorker.getId;
 
 /**
  * @author cc

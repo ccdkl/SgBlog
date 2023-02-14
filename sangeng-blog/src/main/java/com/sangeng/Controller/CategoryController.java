@@ -1,6 +1,5 @@
 package com.sangeng.Controller;
 
-import com.sangeng.domain.Category;
 import com.sangeng.domain.ResponseResult;
 import com.sangeng.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

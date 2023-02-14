@@ -3,18 +3,15 @@ package com.sangeng.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sangeng.constants.SystemConstants;
-import com.sangeng.domain.Article;
-import com.sangeng.domain.Link;
 import com.sangeng.domain.ResponseResult;
+import com.sangeng.domain.entity.Link;
 import com.sangeng.domain.vo.LinkVo;
-import com.sangeng.service.LinkService;
 import com.sangeng.mapper.LinkMapper;
+import com.sangeng.service.LinkService;
 import com.sangeng.utils.BeanCopyUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import static com.sangeng.constants.SystemConstants.LINK_STATUS_NORMAL;
 
 /**
 * @author cc

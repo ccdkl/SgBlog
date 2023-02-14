@@ -1,6 +1,6 @@
 package com.sangeng.service;
 
-import com.sangeng.domain.User;
+import com.sangeng.domain.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

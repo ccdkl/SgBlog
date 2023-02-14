@@ -1,73 +1,89 @@
-package com.sangeng.domain;
+package com.sangeng.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
- * 评论表
- * @TableName sg_comment
+ * 用户表
+ * @TableName sys_user
  */
-@TableName(value ="sg_comment")
+@TableName(value ="sys_user")
 @Data
-public class Comment implements Serializable {
+public class User implements Serializable {
     /**
-     * 
+     * 主键
      */
     @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
-     * 评论类型（0代表文章评论，1代表友链评论）
+     * 用户名
+     */
+    private String userName;
+
+    /**
+     * 昵称
+     */
+    private String nickName;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 用户类型：0代表普通用户，1代表管理员
      */
     private String type;
 
     /**
-     * 文章id
+     * 账号状态（0正常 1停用）
      */
-    private Long articleId;
+    private String status;
 
     /**
-     * 根评论id
+     * 邮箱
      */
-    private Long rootId;
+    private String email;
 
     /**
-     * 评论内容
+     * 手机号
      */
-    private String content;
+    private String phonenumber;
 
     /**
-     * 所回复的目标评论的userid
+     * 用户性别（0男，1女，2未知）
      */
-    private Long toCommentUserId;
+    private String sex;
 
     /**
-     * 回复目标评论id
+     * 头像
      */
-    private Long toCommentId;
+    private String avatar;
 
     /**
-     * 
+     * 创建人的用户id
      */
     private Long createBy;
 
     /**
-     * 
+     * 创建时间
      */
     private Date createTime;
 
     /**
-     * 
+     * 更新人
      */
     private Long updateBy;
 
     /**
-     * 
+     * 更新时间
      */
     private Date updateTime;
 

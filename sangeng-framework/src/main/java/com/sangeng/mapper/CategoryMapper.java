@@ -1,6 +1,6 @@
 package com.sangeng.mapper;
 
-import com.sangeng.domain.Category;
+import com.sangeng.domain.entity.Category;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

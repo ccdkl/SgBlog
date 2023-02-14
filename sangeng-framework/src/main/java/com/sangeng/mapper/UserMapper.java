@@ -1,7 +1,7 @@
 package com.sangeng.mapper;
 
-import com.sangeng.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.sangeng.domain.entity.User;
 
 /**
 * @author cc
